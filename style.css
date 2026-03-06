@@ -1,0 +1,114 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(270deg, #0f2027, #203a43, #2c5364);
+  background-size: 600% 600%;
+  animation: bgMove 15s ease infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+@keyframes bgMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.card {
+  width: 360px;
+  background: rgba(17,24,39,0.9);
+  backdrop-filter: blur(10px);
+  border-radius: 26px;
+  padding: 28px;
+  text-align: center;
+  box-shadow: 0 30px 70px rgba(0,0,0,0.7);
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #00ffd5;
+}
+
+h1 {
+  margin: 12px 0 4px;
+  font-size: 22px;
+  background: linear-gradient(90deg, #00ffd5, #00ff88);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.circle-timer {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 18px auto;
+}
+
+.circle-timer svg {
+  width: 120px;
+  height: 120px;
+  transform: rotate(-90deg);
+}
+
+.circle-timer circle {
+  fill: none;
+  stroke-width: 8;
+}
+
+.circle-timer circle:first-child {
+  stroke: #333;
+}
+
+#progress {
+  stroke: #00ffd5;
+  stroke-dasharray: 339;
+  stroke-dashoffset: 0;
+}
+
+.circle-timer span {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.cta {
+  display: block;
+  margin-top: 22px;
+  padding: 14px;
+  border-radius: 16px;
+  text-decoration: none;
+  font-weight: 700;
+  color: #000;
+  background: linear-gradient(90deg, #00ffd5, #00ff88);
+}
+
+.pulse {
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(0,255,200,0.6); }
+  70% { box-shadow: 0 0 0 18px rgba(0,255,200,0); }
+  100% { box-shadow: 0 0 0 0 rgba(0,255,200,0); }
+}
+
+.vip {
+  margin-top: 14px;
+  font-size: 13px;
+  opacity: 0.85;
+}
